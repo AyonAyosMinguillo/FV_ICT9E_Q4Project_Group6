@@ -41,30 +41,40 @@
             margin-bottom: 10px;
             border-radius: 10px;
         }
-                                .calendar {
+        .calendar {
                             background-color: #f8f9fa;
+                            border-radius: 10px;
+                            height: 10px
                         }
-                        
-#calendar {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  background-color: dodgerblue;
-  padding: 10px;
-  gap: 5px;
-}
 
 #calendar {
   background-color: #f1f1f1;
   padding: 10px;
-  font-size: 30px;
-  display: grid;
-  display: fluid;
   text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
+   max-width: 260px;
+margin: 0 auto;
+}
+#calendar .row {
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+}
+#calendar .col {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.upcoming-schoolevents-tab{
+ background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
   font-size: 15px;
 }
-.gray {
-    color:#4d535880
-}
+
  footer {
        position: fixed;
        left: 0;
@@ -109,56 +119,74 @@
             <div class="col-md-3">
                 <div class="calendar">
                 <div class="border p-3 text-center bg-white rounded shadow-sm mb-4">
-                    <h5 style="text-align: center;">School Calendar</h5>
-                    <p class="text-muted">Events and schedules go here.</p>
+                    <h5 style="text-align: center; color:#003a6c; font-weight: bold;">School Calendar</h5>
                             <div class="container" id="calendar">
 
 <div class="container" id="calendar">
-    <div class="day-name">S</div>
-    <div class="day-name">M</div>
-    <div class="day-name">T</div>
-    <div class="day-name">W</div>
-    <div class="day-name">T</div>
-    <div class="day-name">F</div>
-    <div class="day-name">S</div>
+        <h2>MAY 2026</h2>
+    <div class="row">
+        <div class="col" id="day-name">S</div>
+        <div class="col" id="day-name">M</div>
+        <div class="col" id="day-name">T</div>
+        <div class="col" id="day-name">W</div>
+        <div class="col" id="day-name">T</div>
+        <div class="col" id="day-name">F</div>
+        <div class="col" id="day-name">S</div>
 
-    <div class="gray">26</div>
-    <div class="gray">27</div>
-    <div class="gray">28</div>
-    <div class="gray">29</div>
-    <div class="gray">30</div>
-    
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
-    <div>11</div>
-    <div style="color: #831616;" onclick="window.alert('Exam Week - Grade 1-5');">12</div>
-    <div style="color: #831616;" onclick="window.alert('Exam Week - Grade 1-5');">13</div>
-    <div style="color: #831616;" onclick="window.alert('Last Day of Classes - Grade 1-5 / Exam Week - Grade 7-11');">14</div>
-    <div style="color: #831616;" onclick="window.alert('Last Day of Classes - Grade 7-11');">15</div>
-    <div>16</div>
-    <div>17</div>
-    <div>18</div>
-    <div>19</div>
-    <div>20</div>
-    <div>21</div>
-    <div>22</div>
-    <div>23</div>
-    <div>24</div>
-    <div>25</div>
-    <div>26</div>
-    <div>27</div>
-    <div>28</div>
-    <div>29</div>
-    <div>30</div>
-    <div>31</div>
+    </div>
+
+    <div class="row">
+        <div class="col" style="color:#8b8b8bce">26</div>
+        <div class="col" style="color:#8b8b8bce">27</div>
+        <div class="col" style="color:#8b8b8bce">28</div>
+        <div class="col" style="color:#8b8b8bce">29</div>
+        <div class="col" style="color:#8b8b8bce">30</div>
+        <div class="col" >1</div>
+        <div class="col" >2</div>
+    </div>
+
+<div class="row">
+    <div class="col" id="May">3</div>
+    <div class="col" id="May">4</div>
+    <div class="col" id="May">5</div>
+    <div class="col" id="May">6</div>
+    <div class="col" id="May">7</div>
+    <div class="col" id="May">8</div>
+    <div class="col" id="May">9</div>
+</div>
+<div class="row">
+    <div class="col" id="May">10</div>
+    <div class="col" id="May">11</div>
+    <div class="col" id="May" style="color: #831616;" onclick="window.alert('Exam Week - Grade 1-5');">12</div>
+    <div class="col" id="May" style="color: #831616;" onclick="window.alert('Exam Week - Grade 1-5');">13</div>
+    <div class="col" id="May" style="color: #831616;" onclick="window.alert('Last Day of Classes - Grade 1-5 / Exam Week - Grade 7-11');">14</div>
+    <div class="col" id="May" style="color: #831616;" onclick="window.alert('Last Day of Classes - Grade 7-11');">15</div>
+    <div class="col" id="May">16</div>
+</div>
+<div class="row">
+    <div class="col" id="May">17</div>
+    <div class="col" id="May">18</div>
+    <div class="col" id="May">19</div>
+    <div class="col" id="May">20</div>
+    <div class="col" id="May">21</div>
+    <div class="col" id="May">22</div>
+    <div class="col" id="May">23</div>
+</div>
+<div class="row">
+    <div class="col" id="May">24</div>
+    <div class="col" id="May">25</div>
+    <div class="col" id="May">26</div>
+    <div class="col" id="May">27</div>
+    <div class="col" id="May">28</div>
+    <div class="col" id="May">29</div>
+    <div class="col" id="May">30</div>
+    <div class="col" id="May">31</div>
+</div>
+<br>
+<br>
+<div class="container upcoming-schoolevents-tab">
+Upcoming School Evemts:
+</div>
 </div>
     </div>
                 <div class="box" style="height:200px;"></div>
@@ -167,8 +195,7 @@
         </div>
         
             <div class="bulletinbox col-md-6">
-                <div class="border p-3">
-                    <h2 style="text-align: center;">School Bulletin</h2>
+                <h2 style="text-align: center; font-family:'Times New Roman', Times, serif; color: #003a6c">AD MAJOREM DEI GLORIAM</h2>
                      
                      <div class="thepost">
                             <img src="ACET.jpg" class="img-fluid" alt="ACETPOST">
@@ -193,7 +220,6 @@
                             We honor the courage and sacrifice of those who fought for our freedom. May their legacy inspire us to serve with unity and love of country.<p>
                      </div>
                 </div>
-            </div>
             
 
     <div class="col-md-3">
@@ -203,6 +229,7 @@
         <p class="mb-0">ID: 104067670</p>
         <p class="mb-0">Student</p>
         <p>9 - Augustine</p>
+        <button class="btn btn-primary btn-sm w-100" style="background-color: #003a6c; border: none; border-radius: 10px; font-weight: bold;" onclick="location.href='profile.html'">Profile</button>
 </div>
     <div class="border p-3 bg-white rounded shadow-sm mb-4">
         <h2 class="text-center" style="color: #003a6c">Assessments</h2>
@@ -268,6 +295,7 @@ Basically AI was used to help with like the design when I was stressing and cant
 1 Prompt: "HELP MEEEEE WHY IS IT ALL ON THE SIDE"
 2 Prompt: "hey can u help because WHY is the task bar not centered to the nav bar"
 3 Prompt: "Is there a way to allow the user to see the submission thingy when they click the submit task button and like when they click it the submission thingy will be hide?"
+4. Prompt: The Ad Majorem text is too far from the class bulletin
 
 GROUP 6 - GRADE 9 EMERALD 2526 FINAL PROJECT
 JACOB MINGUILLO - LEADER
