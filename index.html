@@ -25,7 +25,7 @@ font-family: 'Sen', sans-serif;
 .box {
             
             border-radius: 16px;
-            width: 400px;
+            width: 500px;
             padding: 40px;
             border: 4px solid #cbd0d8;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
@@ -70,11 +70,13 @@ font-family: 'Sen', sans-serif;
 
 <div class="box text-center">
     <img src="AteneoLogo.png" alt="Ateneo Logo" style="width: 200px; height: 200px; margin-bottom: 20px;">
-    <h3 style="color: #003a6c">Login Page</h>
+    <h3 style="color: #003a6c; font-size: 20px;">Integraded Student Information System</h3>
 <h2 class="mb-3">ATENEO DE MANILA</h2>
-<h2 style="text-align: left">Username</h2>
-<input type="text" id="username" class="form-control mb-2" placeholder="Enter Username...">
-<h2 style="text-align: left">Password</h2>
+<small>Please input your student number and password.
+<br><br>
+<h2 style="text-align: left; font-size: 20px; font-weight: 300;">Student Number</h2>
+<input type="text" id="username" class="form-control mb-2" placeholder="Enter Student Number...">
+<h2 style="text-align: left; font-size: 20px; font-weight: 300;">Password</h2>
 <input type="password" id="password" class="form-control mb-2" placeholder="Enter Password...">
 
 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -85,7 +87,6 @@ font-family: 'Sen', sans-serif;
     <a href="#" onclick="forgotPassword()">Forgot password?</a>
 </div>
     <button id="loginBtn" class="btn btn-custom w-50" onclick="login()" style="color:#003a6c">Login</button>
-    <button id="resetBtn" class="btn btn-custom w-50 mt-2" onclick="resetAttempts()" style="display: none;">Reset Attempts</button>
 
     <h4 id="result"></h4>
 
@@ -97,30 +98,30 @@ let attempt_counter = 0;
 function login() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-    let correctUser = "ROBERT_PREVOST";
+    let correctUser = "014-PREVOST";
     let correctPass = "BlueEagles";
 
     if (username === correctUser && password === correctPass) {
         document.getElementById("result").innerHTML = "Hello " + username + ", you have successfully logged in!";
-        window.alert("Hello " + username + ", you have successfully logged in!");
+        window.alert("Ad Majorem Dei Gloriam!");
         attempt_counter = 0;
         window.location.href = "Dashboard.html";
     } else {
         attempt_counter++;
         if (attempt_counter >= 3) {
-            document.getElementById("result").innerHTML = "Access denied. Account locked after 3 attempts!";
-            window.alert("Access denied. Account locked after 3 attempts!");
+            document.getElementById("result").innerHTML = "Too many attempts!";
+            window.alert("Please try again later.");
             document.getElementById("loginBtn").disabled = true;
             document.getElementById("resetBtn").style.display = "block";
         } else {
-            document.getElementById("result").innerHTML = "Incorrect username and/or password. Attempt " + attempt_counter + " of 3";
+            document.getElementById("result").innerHTML = "Incorrect Student Number or password. You have " + attempt_counter + " out of 3 attempts";
             window.alert("The Password is incorrect. Please try again.");
         }
     }
 }
 
 function forgotPassword() {
-    alert("Try Username ROBERT_PREVOST and password is BlueEagles");
+    alert("Try Username 014-PREVOST and password is BlueEagles");
 }
 
 function resetAttempts() {
@@ -134,6 +135,7 @@ function resetAttempts() {
   <p>Group 6</p>
   <p>Jacob Minguillo Megan Gacita , Clarence Mari , Marcus De Jesus</p>
 </footer>
+
 <!-- Sources and any use of AI 
  Sources:
 - W3Schools.com. (n.d.). https://www.w3schools.com/
